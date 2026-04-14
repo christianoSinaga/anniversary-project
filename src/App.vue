@@ -1,11 +1,12 @@
-<script setup></script>
+<script setup>
+import MainMessage from './components/MainMessage.vue'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <!-- Main Container -->
+  <div class="flex flex-col bg-linear-to-b from-red-100 to-white">
+    <MainMessage />
+  </div>
 </template>
 
 <style scoped></style>
