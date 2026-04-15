@@ -2,11 +2,14 @@
   <transition name="fade">
     <div
       v-if="show"
-      class="m-11 p-12 flex flex-col justify-between items-center gap-6 text-gray-600"
+      class="flex flex-col justify-between items-center text-center gap-6 text-gray-600"
     >
       <span class="text-sm tracking-widest text-pink-700">LIMITLESS LOVE</span>
       <h1 class="text-5xl tracking-wide font-bold ease-in text-center">Happy Anniversary</h1>
-      <p class="text-sm">Untuk kamu yang {{ gap ?? '...' }} km dari ku</p>
+      <p class="text-sm">
+        Untuk kamu yang <span class="px-4 py-2 bg-white rounded-4xl">{{ gap ?? '...' }}</span> km
+        dari aku
+      </p>
     </div>
   </transition>
 </template>
