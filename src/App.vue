@@ -43,13 +43,13 @@ onMounted(() => {
     {{ isPlaying ? '⏸️' : '▶️' }}
   </button>
   <audio ref="audioRef" loop>
-    <source src="/src/assets/song/shittin-me.mp3" type="audio/mpeg" />
+    <source src="/src/assets/song/kota-tak-sama-tanpamu.mp3" type="audio/mpeg" />
   </audio>
   <!-- Main Container -->
   <div
     class="h-screen overflow-y-scroll snap-y snap-mandatory bg-linear-to-br from-red-100 to-purple-300"
   >
-    <section class="h-dvh pb-20 flex items-center justify-center snap-start">
+    <section class="h-dvh sm:pb-20 flex items-center justify-center snap-start">
       <MainMessage />
     </section>
 
@@ -61,7 +61,7 @@ onMounted(() => {
       </div>
     </section>
 
-    <section class="h-full pb-20 flex items-center justify-center snap-start">
+    <section class="h-full sm:pb-20 flex items-center justify-center snap-start">
       <GalleryWindow />
     </section>
   </div>
