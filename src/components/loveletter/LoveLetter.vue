@@ -4,10 +4,10 @@
     <!-- Clue how to open the love letter -->
     <div
       v-if="!isOpened"
-      class="relative w-64 h-64 border rounded-xl flex items-center justify-center p-12"
+      class="relative w-[70vw] h-[70vh] border rounded-xl flex items-center justify-center p-12"
     >
       <p class="absolute top-2 text-sm text-gray-500 text-center">
-        Click the heart to open the love letter
+        Coba klik hati ini {{ heartHP }} kali, siapa tau ada sesuatu hehe
       </p>
 
       <button
@@ -35,10 +35,14 @@
           />
         </svg>
       </button>
+
+      <p v-if="heartHP < 10" class="absolute bottom-2 text-sm text-pink-500 text-center">
+        Ayooo dikit lagi, kamu pasti bisaaa
+      </p>
     </div>
 
     <!-- The Love Letter -->
-    <div class="w-1/2 flex items-center justify-center">
+    <div class="w-[70vw] flex items-center justify-center">
       <div
         class="bg-white w-full py-10 rounded-xl shadow-lg flex items-center justify-center transition-all duration-700"
         :class="isOpened ? 'scale-100 opacity-100' : 'scale-0 opacity-0'"
@@ -69,9 +73,11 @@ const heartPosition = ref({
 
 const isOpened = ref(false)
 let clickCount = 0
+let heartHP = 21
 
 function moveHeart() {
   clickCount++
+  heartHP--
 
   heartPosition.value = {
     top: Math.random() * 80,
