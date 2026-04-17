@@ -1,6 +1,7 @@
 <script setup>
 import CheckpointWindow from './components/checkpoint/CheckpointWindow.vue'
 import GalleryWindow from './components/gallery/GalleryWindow.vue'
+import LoveLetter from './components/loveletter/LoveLetter.vue'
 import MainMessage from './components/MainMessage.vue'
 import { ref, onMounted } from 'vue'
 
@@ -63,6 +64,10 @@ onMounted(() => {
 
     <section class="h-full sm:pb-20 flex items-center justify-center snap-start">
       <GalleryWindow />
+    </section>
+
+    <section class="h-full sm:pb-20 flex items-center justify-center snap-start">
+      <LoveLetter />
     </section>
   </div>
 </template>
