@@ -2,7 +2,7 @@
   <div class="flex flex-col gap-5 items-center w-full overflow-hidden">
     <h1 class="flex gap-2 text-2xl items-center font-bold text-pink-700">
       <Camera :size="24" />
-      Gallery
+      Love Gallery
     </h1>
 
     <div class="w-full overflow-x-auto">
