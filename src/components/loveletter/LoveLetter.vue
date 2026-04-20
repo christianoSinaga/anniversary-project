@@ -1,13 +1,18 @@
 <template>
   <!-- Container -->
-  <div class="w-screen h-screen flex flex-col items-center justify-center">
+  <div class="w-full flex flex-col items-center gap-3 overflow-hidden pt-16">
+    <h1 class="flex gap-2 text-2xl items-center font-bold text-pink-700">
+      <Letter :size="24" />
+      Gallery
+    </h1>
+
     <!-- Clue how to open the love letter -->
     <div
       v-if="!isOpened"
-      class="relative w-[70vw] h-[70vh] border rounded-xl flex items-center justify-center p-12"
+      class="relative w-[70vw] h-[70vh] border border-pink-800 rounded-xl flex items-center justify-center p-12"
     >
       <p class="absolute top-2 text-sm text-gray-500 text-center">
-        Coba klik hati ini {{ heartHP }} kali, siapa tau ada sesuatu hehe
+        Coba tangkap hatinya {{ heartHP }} kali, siapa tau ada sesuatu hehe
       </p>
 
       <button
@@ -18,22 +23,7 @@
           left: heartPosition.left + '%',
         }"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-          width="48"
-          height="48"
-        >
-          <path
-            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
-      2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 
-      4.5 2.09C13.09 3.81 14.76 3 
-      16.5 3 19.58 3 22 5.42 
-      22 8.5c0 3.78-3.4 6.86-8.55 
-      11.54L12 21.35z"
-          />
-        </svg>
+        <Heart :size="48" />
       </button>
 
       <p v-if="heartHP < 10" class="absolute bottom-2 text-sm text-pink-500 text-center">
@@ -65,6 +55,8 @@
 
 <script setup>
 import { ref } from 'vue'
+import Heart from '@/assets/icons/Heart.vue'
+import Letter from '@/assets/icons/Letter.vue'
 
 const heartPosition = ref({
   top: 50,
@@ -90,4 +82,8 @@ function moveHeart() {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+h1 {
+  font-family: 'Cardo', serif;
+}
+</style>
