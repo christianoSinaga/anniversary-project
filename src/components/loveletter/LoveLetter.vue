@@ -1,6 +1,6 @@
 <template>
   <!-- Container -->
-  <div class="w-full flex flex-col items-center gap-3 overflow-hidden pt-16">
+  <div class="w-full flex flex-col items-center gap-5 overflow-hidden pt-16">
     <h1 class="flex gap-2 text-2xl items-center font-bold text-pink-700">
       <Letter :size="24" />
       Gallery
