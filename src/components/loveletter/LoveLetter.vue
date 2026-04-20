@@ -37,17 +37,17 @@
         class="bg-white w-full py-10 rounded-xl shadow-lg flex items-center justify-center transition-all duration-700"
         :class="isOpened ? 'scale-100 opacity-100' : 'scale-0 opacity-0'"
       >
-        <p v-if="isOpened" class="text-gray-700 capitalize text-center px-4">
-          <span class="text-sm">Berapa kilometerpun jarak memisahkan kita </span> <br />
-          <br />
-          <span class="text-sm">Berapa kalipun kita bertemu dan kembali berpisah </span> <br />
-          <br />
-          <span class="text-sm">Berapa kalipun kita bertengkar </span> <br />
-          <br />
-          <span class="text-sm">I always love you </span> <br />
-          <br />
-          <span class="text-xl text-pink-700">and I always love you more</span>
-        </p>
+        <div v-if="isOpened" class="flex flex-col gap-6 text-gray-700 capitalize text-center px-4">
+          <p class="text-sm">Berapa kilometerpun jarak memisahkan kita</p>
+
+          <p class="text-sm">Berapa kalipun kita bertemu dan kembali berpisah</p>
+
+          <p class="text-sm">Berapa kalipun kita bertengkar</p>
+
+          <p class="text-sm">I always love you</p>
+
+          <p class="text-xl font-bold text-pink-700">and I always love you more</p>
+        </div>
       </div>
     </div>
   </div>
